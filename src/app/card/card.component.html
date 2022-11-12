@@ -3,6 +3,34 @@
 <button>Ola Mundao</button>
 
 <ul>
-  <li *ngFor="let p of products ">{{ p }}</li>
+  <li *ngFor="let p of products; let i = index "
+    (click)="remove(i)"
+  >
+    {{ i }} - {{ p }}
+  </li>
   <button (click)="add()">Adicionar</button>
 </ul>
+
+<div [ngSwitch]="menuType">
+  <div *ngSwitchDefault="'user'">
+    <ul>
+      <li>Editar perfil</li>
+      <li>Adicionar cartao</li>
+    </ul>
+  </div>
+  <div *ngSwitchCase="'admin'">
+    <ul>
+      <li>Editar perfil</li>
+      <li>Adicionar cartao</li>
+      <li>Gerenciar usuarios</li>
+    </ul>
+  </div>
+  <div *ngSwitchCase="'superuser'">
+    <ul>
+      <li>Editar perfil</li>
+      <li>Adicionar cartao</li>
+      <li>Gerenciar usuarios</li>
+      <li>Gerenciar admins</li>
+    </ul>
+  </div>
+</div>
