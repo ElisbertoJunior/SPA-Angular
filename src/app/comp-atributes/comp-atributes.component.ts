@@ -11,6 +11,7 @@ export class CompAtributesComponent implements OnInit {
   corTexto: string = "white"
   item: string = ""
   list: string[] = []
+  isEnable: boolean = false
 
   constructor() { }
 

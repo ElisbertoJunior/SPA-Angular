@@ -15,4 +15,8 @@ CURSO ANGULAR
   <li *ngFor="let element of list">{{ element }}</li>
 </ul>
 
+<ng-template [ngIf]="isEnable">
+  <a href="#">Adicionar ao carrinho</a>
+</ng-template>
+
 <hr>
