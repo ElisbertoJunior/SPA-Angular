@@ -1,0 +1,18 @@
+<p [ngClass]="style" >comp-atributes works!</p>
+<button (click)="toExchange()">Trocar</button>
+
+<h1 [ngStyle]="{'background': corFundo, 'color': corTexto }">
+CURSO ANGULAR
+</h1>
+
+<h1>Lista de compras</h1>
+<p>adicione um item</p>
+<input type="text" [(ngModel)]="item">
+<button (click)="addList()">Adicionar</button>
+<p>{{ item }}</p>
+
+<ul >
+  <li *ngFor="let element of list">{{ element }}</li>
+</ul>
+
+<hr>
